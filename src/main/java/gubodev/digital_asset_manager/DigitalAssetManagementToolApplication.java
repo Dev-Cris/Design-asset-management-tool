@@ -8,7 +8,6 @@ public class DigitalAssetManagementToolApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DigitalAssetManagementToolApplication.class, args);
-        System.out.println("Hi, Mom! :D");
     }
 
 }
