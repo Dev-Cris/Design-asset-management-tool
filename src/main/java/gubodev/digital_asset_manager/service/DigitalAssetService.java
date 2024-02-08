@@ -20,7 +20,6 @@ public class DigitalAssetService {
         MultipartFile file = request.getFile();
         DigitalAssetCreateResponse result = modelMapper.map(request, DigitalAssetCreateResponse.class);
         result.setFileName(file.getName());
-        System.out.println("Lol");
         return result;
     }
 

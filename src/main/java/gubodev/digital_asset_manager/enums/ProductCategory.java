@@ -1,5 +1,10 @@
 package gubodev.digital_asset_manager.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum ProductCategory {
 
     BISCUITS("Biscuits"),
@@ -15,11 +20,4 @@ public enum ProductCategory {
     TEAS("Teas");
 
     private final String value;
-
-    private ProductCategory(String value) {
-        this.value = value;
-    }
-    public String getValue() {
-        return value;
-    }
 }

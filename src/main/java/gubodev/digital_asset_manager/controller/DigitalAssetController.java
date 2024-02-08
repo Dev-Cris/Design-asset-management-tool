@@ -6,10 +6,11 @@ import gubodev.digital_asset_manager.service.DigitalAssetService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api/digitalAsset")
@@ -24,7 +25,7 @@ public class DigitalAssetController {
     }
 
     @PostMapping(value = "/upload")
-    public ResponseEntity<DigitalAssetCreateResponse> uploadFile(@RequestBody DigitalAssetCreateRequest request){
+    public ResponseEntity<DigitalAssetCreateResponse> uploadFile(@RequestBody DigitalAssetCreateRequest request) {
         log.info("HTTP POST type request to api/digitalAsset/upload");
         DigitalAssetCreateResponse result = digitalAssetService.uploadFile(request);
         return new ResponseEntity<>(result, HttpStatus.OK);
