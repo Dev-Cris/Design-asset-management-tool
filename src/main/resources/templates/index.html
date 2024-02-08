@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Asset Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+    <a href="index.html" class="logo">Digital Asset Management Tool</a>
+    <ul class="nav-list">
+        <a href="#" class="nav-link">
+            <li class="nav-item">Nav-menu</li>
+        </a>
+        <a href="#" class="nav-link">
+            <li class="nav-item">Nav-menu</li>
+        </a>
+        <a href="#" class="nav-link">
+            <li class="nav-item">Nav-menu</li>
+        </a>
+    </ul>
+</nav>
+<form action="http://localhost:8080/api/digitalAsset/upload" method="post" enctype="multipart/form-data" class="form">
+    <label for="myfile">Please browse a file that you wish to upload</label>
+    <input type="file" name="myfile" id="myfile">
+    <label for="tagName">Please enter a tag that you wish for this file</label>
+    <input type="text" name="tagName" id="tagName">
+    <input type="submit" name="file" value="Upload">
+</form>
+</body>
+</html>

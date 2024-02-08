@@ -28,7 +28,7 @@ public class DigitalAsset {
 
     private long fileSize;
 
-    @OneToMany(mappedBy = "tag")
+    @OneToMany(mappedBy = "digitalAsset")
     private List<Tag> tags;
 
     @ElementCollection
